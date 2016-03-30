@@ -1,0 +1,11 @@
+function doThis(endpoint) {
+  var prevState = null;
+
+  setInterval(function () {
+    var state = document.getElementsByClassName("leftStatus")[0].innerHTML;
+    if (state != prevState) {
+      prevState = state;
+      notify(state);
+    }
+  }, 1000);
+}
